@@ -1,9 +1,14 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom'
-import App from '../App.js';
+import App from '../App.jsx';
+import userEvent from '@testing-library/user-event';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+
+test('componente principal de aplicación', () => {
+  render(App.jsx)
+  
+  userEvent.click(screen.getByText('Cargado Satisfactoriamente'))
+
+  expect(screen.getByRole('button')).toBeDisabled()
 });

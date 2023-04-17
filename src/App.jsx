@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import imageRick from './img/rick-morty.png';
 
 
